@@ -47,19 +47,48 @@ a command-line application that simulates controlling a satellite's actions usin
 ### Use of Design Patterns in code
 
 - Singleton Pattern  
-The Satellite class is implemented as a Singleton. It ensures that only one instance of the class exists throughout the application, which is useful for managing a single satellite entity.
+The `Satellite` class is implemented as a Singleton. It ensures that only one instance of the class exists throughout the application, which is useful for managing a single satellite entity.
 
 - Command Pattern  
-The Command Pattern is used to encapsulate and decouple the requests (commands) from the receiver (Satellite) by introducing command objects (Command interface and its implementations: RotateCommand, ActivatePanelsCommand, DeactivatePanelsCommand, and CollectDataCommand). These commands encapsulate the actions and allow for easy addition of new commands without modifying the Satellite class.
+The Command Pattern is used to encapsulate and decouple the requests (`commands`) from the receiver (`Satellite`) by introducing command objects (Command interface and its implementations: `RotateCommand`, `ActivatePanelsCommand`, `DeactivatePanelsCommand`, and `CollectDataCommand`). These commands encapsulate the actions and allow for easy addition of new commands without modifying the `Satellite` class.
 
 - Observer Pattern  
-The Observer Pattern is used to implement a mechanism where SatelliteObserver objects (such as SatelliteDisplay) are notified and updated when the state of the Satellite changes. This pattern allows for loose coupling between the Satellite and its observers.
+The Observer Pattern is used to implement a mechanism where SatelliteObserver objects (such as `SatelliteDisplay`) are notified and updated when the state of the Satellite changes. This pattern allows for loose coupling between the Satellite and its observers.
 
 
 ### Use of OOP principles in Code
 
+Classes and Objects  
+- The code defines classes (e.g., `Satellite`, `SatelliteObserver`) that represent real-world entities and actions.
+- Objects of these classes are created and manipulated throughout the code.
+
+Encapsulation  
+- The `Satellite` class encapsulates the state and behavior of the satellite, hiding internal details.
+- Command classes encapsulate specific commands and their execution.
+
+Polymorphism  
+- The `Command` interface defines the `execute` method, which is implemented by various concrete command classes (`ActivatePanelsCommand`, `RotateCommand`, etc.).
+- This allows the `SatelliteCommandSystem` to treat these commands uniformly, demonstrating polymorphism.
+
+
 ### Use of SOLID Principles in Code
 
+Single Responsibility Principle (SRP)
+- The `Satellite` class primarily manages the state and behavior of the satellite.
+- Concrete command classes (`RotateCommand`, `ActivatePanelsCommand`, etc.) have single responsibilities related to executing specific commands.
+- `SatelliteDisplay` class is responsible for displaying the satellite's state.
+
+Open/Closed Principle (OCP)
+- The code is open for extension when adding new commands (e.g., creating a new command class) without modifying existing code.
+
+Liskov Substitution Principle (LSP)
+- The concrete command classes (`RotateCommand`, `ActivatePanelsCommand`, etc.) implement the `Command` interface, ensuring that they can be used interchangeably where `Command` is expected.
+
+Interface Segregation Principle (ISP)
+- The `SatelliteObserver` interface is minimal and contains only the `update` method, adhering to the ISP by providing a focused interface for observers.
+
+Dependency Inversion Principle (DIP)
+- Dependency injection is used to inject concrete command objects (`RotateCommand`, `ActivatePanelsCommand`, etc.) into the `SatelliteCommandSystem` rather than having the system create these objects directly. This promotes loose coupling and adherence to DIP.
 
 ### Usage
 Upon running the application, you'll be presented with a menu of available commands.  
