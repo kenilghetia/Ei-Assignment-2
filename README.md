@@ -1,23 +1,21 @@
 # Satellite Command System
 
 
+## Introduction
+a command-line application that simulates controlling a satellite's actions using predefined commands. It demonstrates the Command Pattern, Observer Pattern, and Object-Oriented Programming (OOP) principles.
+
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Project Folder Structure](#project-folder-structure)
+- [Functionalities](#functionalities)
 - [Features](#features)
-- [Best Practices](#best-practices)
+  - [Use of Design Patterns in code](#use-of-design-patterns-in-code)
+  - [Use of OOP principles in code](#use-of-oop-principles-in-code)
+  - [Use of SOLID Principles in code](#use-of-solid-principles-in-code)
+- [Usage](#usage)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-
-## Introduction
-a command-line application that simulates controlling a satellite's actions using predefined commands. It demonstrates the Command Pattern, Observer Pattern, and Object-Oriented Programming (OOP) principles.
 
 ## Project Folder Structure
 
@@ -58,6 +56,21 @@ The Command Pattern is used to encapsulate and decouple the requests (commands) 
 - Observer Pattern  
 The Observer Pattern is used to implement a mechanism where SatelliteObserver objects (such as SatelliteDisplay) are notified and updated when the state of the Satellite changes. This pattern allows for loose coupling between the Satellite and its observers.
 
+
+### Use of OOP principles in Code
+### Use of SOLID Principles in Code
+
+
+### Usage
+Upon running the application, you'll be presented with a menu of available commands.  
+Use the following commands to interact with the satellite:  
+- rotate [north/south/east/west]: Rotate the satellite in the specified direction.  
+- activate: Activate the solar panels.  
+- deactivate: Deactivate the solar panels.  
+- collect: Collect data (only when solar panels are active).  
+- exit: Exit the application.  
+The application will display the satellite's state after each command execution.
+
 ## Getting Started
 
 ### Prerequisites
@@ -80,32 +93,3 @@ The Observer Pattern is used to implement a mechanism where SatelliteObserver ob
   ```bash
   java com.satellite.SatelliteCommandSystem
   ```
-
-### Usage
-Upon running the application, you'll be presented with a menu of available commands.  
-Use the following commands to interact with the satellite:  
-- rotate [north/south/east/west]: Rotate the satellite in the specified direction.  
-- activate: Activate the solar panels.  
-- deactivate: Deactivate the solar panels.  
-- collect: Collect data (only when solar panels are active).  
-- exit: Exit the application.  
-The application will display the satellite's state after each command execution.  
-
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-
-
-
-
-
-
-### Use of OOP principles in Code
-### Use of SOLID Principles in Code
-
-## Application Overview
-
-### User Input along with images
-
-### Output
-
-
