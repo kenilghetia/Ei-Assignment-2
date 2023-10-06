@@ -36,15 +36,14 @@ a command-line application that simulates controlling a satellite's actions usin
     ├── LICENSE
     └── README.md
 
-## Features
+## Functionalities
 
 - Rotate the satellite to different orientations (North, South, East, West).
 - Activate and deactivate the solar panels of the satellite.
 - Collect data when the solar panels are active.
-- Monitor the satellite's state in real-time using the Observer Pattern.
-- Custom exceptions for handling command execution errors.
+- Final state is displayed when user exits the program.
 
-## Best Practices
+## Features
 ### Use of Design Patterns in code
 
 - Singleton Pattern  
@@ -58,6 +57,7 @@ The Observer Pattern is used to implement a mechanism where SatelliteObserver ob
 
 
 ### Use of OOP principles in Code
+
 ### Use of SOLID Principles in Code
 
 
@@ -70,6 +70,27 @@ Use the following commands to interact with the satellite:
 - collect: Collect data (only when solar panels are active).  
 - exit: Exit the application.  
 The application will display the satellite's state after each command execution.
+
+---
+
+- Initial Screen  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/4564776d-1743-43fb-bf0c-297fdd64dcb9)
+- Rotate satellite  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/97d90f12-5a1b-4e9c-8de3-20a01cccb828)
+- Activate Solar panels  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/dcd1369f-e2c6-49b3-ac4b-3fe4eeeb6b76)
+
+- Collect Data  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/f2dd805c-6ba7-4e08-96e0-2fbea82542f6)
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/0135f8f6-8993-466f-89da-a1303eea113c)
+  
+- Deactivate Solar panels  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/bf7ee20b-4053-405a-8248-c37125947da4)
+
+- Exit and display final result  
+  ![image](https://github.com/kenilghetia/Ei-Assignment-2/assets/91539303/eb6df6f8-a7e2-415e-bb06-4acf9023e016)
+
+
 
 ## Getting Started
 
